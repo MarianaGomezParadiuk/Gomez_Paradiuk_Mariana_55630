@@ -1,0 +1,22 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block imagen %}{% endblock imagen %}
+{% block titulo_principal %}Buscar{% endblock titulo_principal %}
+{% block palabras_clave %}Busqueda por nombre de artículo{% endblock palabras_clave %}
+
+{% block perros_adoptados %}{% endblock perros_adoptados %}
+
+{% block formulario %}
+    <form action="/buscar" method="get">
+        {% csrf_token %}
+        <p>Patron a Buscar en Articulos: <input type="text" name="buscar" id="buscar"></p>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock formulario %}
+
+{% block acerca_pagina %} {% endblock acerca_pagina %}
+
+{% block modals %}{% endblock modals %}
+
+{% block modals_otros %}{% endblock modals_otros %}
